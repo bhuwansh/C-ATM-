@@ -65,7 +65,7 @@ int main()
         {
         case 1:
             /* code */
-            cout << "User Register  :" << endl;
+            cout << "User Registration Form  :" << endl;
 
             cout << " Enter Your Name (string) :";
             cin >> Name;
@@ -92,7 +92,7 @@ int main()
             break;
         case 2:
             /* code */
-            cout << " Withdraw INR:" << endl;
+            cout << " Withdraw Your Money (INR:)" << endl;
             cout << " Enter Withdrawal Amount (Rs.) :";
             cin >> WithdrawAmount;
             if (WithdrawAmount <= Balance)
