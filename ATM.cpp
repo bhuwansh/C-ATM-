@@ -3,12 +3,10 @@ using namespace std;
 
 void showMenu()
 {
- 
-
     cout << "####################################################" << endl;
     cout << "######         *Welcome to AIS ATM*           ######" << endl;
     cout << "##  -------------------------------------------   ##" << endl;
-    cout << "##  1) Register a user / Account Open             ##" << endl;    
+    cout << "##  1) Register a user / Account Open             ##" << endl;
     cout << "##  2) Withdraw INR                               ##" << endl;
     cout << "##  3) Withdraw International Currency            ##" << endl;
     cout << "##  4) Check Balance                              ##" << endl;
@@ -77,11 +75,37 @@ public:
     void Withdrawal()
     {
         long amt;
-        cout << "Enter Amount U want to withdraw? ";
+        char noteOption[1];
+        int noteQuantity;
+        cout << "Enter Amount U want to withdraw?" << endl;
         cin >> amt;
-        if (amt <= balance){
+
+        cout << "choose note type  :" << endl;
+        cout << "a : 50 " << endl;
+        cout << "b : 100 " << endl;
+        cout << "c : 500 " << endl;
+        cout << "d : 2000 " << endl;
+
+        cin >> noteOption;
+        // swtich(noteOption) :
+        // {
+        // case "a":
+        //     cout << "Yout choose 50 Rs. Note " << endl;
+        //     break;
+        // case "b":
+        //     cout << "Yout choose 100 Rs. Note " << endl;
+        //     break;
+        // case "c":
+        //     cout << "Yout choose 500 Rs. Note " << endl;
+        //     break;
+        // case "d":
+        //     cout << "Yout choose 2000 Rs. Note " << endl;
+        //     break;
+        // }
+        if (amt <= balance)
+        {
             balance = balance - amt;
-            cout << "Withdraw Successful " << endl; 
+            cout << "Withdraw Successful " << endl;
         }
         else
             cout << "Less Balance..." << endl;
@@ -137,8 +161,8 @@ int main()
             if (!found)
                 cout << "Record Not Found" << endl;
             break;
-            case 3: //Withdraw International Currency
-             cout << "Withdraw International Currency : ";
+        case 3: // Withdraw International Currency
+            cout << "Withdraw International Currency : ";
             break;
         case 4: // searching the record
             cout << "Enter Account Number? ";
